@@ -3,7 +3,7 @@ package com.spider;
 public class MainService {
 	
 	public static void main(String[] args){
-		int spiderCount = 5;
+		int spiderCount = 10;
 //		long sleepMillis = 6000;
 		
 		//获取规则
