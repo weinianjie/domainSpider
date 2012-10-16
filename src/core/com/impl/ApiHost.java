@@ -6,7 +6,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.xml.XmlPage;
 import com.spider.ApiEntity;
 import com.spider.DBService;
-import com.spider.KeywordService;
+import com.spider.ConfigService;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
@@ -31,9 +31,9 @@ public class ApiHost extends AbstractHost{
 
     @Override
     public void processHost() {
-        for(int i = 0;i < KeywordService.keywords.size();i++ ){
+        for(int i = 0;i < ConfigService.keywords.size();i++ ){
             try{
-                Map.Entry<String, String> entry = KeywordService.keywords.get(i);
+                Map.Entry<String, String> entry = ConfigService.keywords.get(i);
                 tuanid = entry.getKey();
                 url = entry.getValue();
                 System.out.println("当前站点id：" + tuanid + "-----------------" + (i+1));

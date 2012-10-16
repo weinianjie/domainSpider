@@ -13,9 +13,13 @@ public class DomainEntity {
 	private int id;
 	private String name;
 	private String org;
+	private int scanCount;
+	private Date lastScanDate;
+	private Date registDate;
+	private Date overDate;
 	private String owner;
-	private Date bdate;
-	private Date edate;
+	private int scroe;
+	private boolean isWord;
 	private Date cts;
 	private Date uts;
 	
@@ -37,23 +41,47 @@ public class DomainEntity {
 	public void setOrg(String org) {
 		this.org = org;
 	}
+	public int getScanCount() {
+		return scanCount;
+	}
+	public void setScanCount(int scanCount) {
+		this.scanCount = scanCount;
+	}
+	public Date getLastScanDate() {
+		return lastScanDate;
+	}
+	public void setLastScanDate(Date lastScanDate) {
+		this.lastScanDate = lastScanDate;
+	}
+	public Date getRegistDate() {
+		return registDate;
+	}
+	public void setRegistDate(Date registDate) {
+		this.registDate = registDate;
+	}
+	public Date getOverDate() {
+		return overDate;
+	}
+	public void setOverDate(Date overDate) {
+		this.overDate = overDate;
+	}
 	public String getOwner() {
 		return owner;
 	}
 	public void setOwner(String owner) {
 		this.owner = owner;
 	}
-	public Date getBdate() {
-		return bdate;
+	public int getScroe() {
+		return scroe;
 	}
-	public void setBdate(Date bdate) {
-		this.bdate = bdate;
+	public void setScroe(int scroe) {
+		this.scroe = scroe;
 	}
-	public Date getEdate() {
-		return edate;
+	public boolean isWord() {
+		return isWord;
 	}
-	public void setEdate(Date edate) {
-		this.edate = edate;
+	public void setWord(boolean isWord) {
+		this.isWord = isWord;
 	}
 	public Date getCts() {
 		return cts;
@@ -66,6 +94,5 @@ public class DomainEntity {
 	}
 	public void setUts(Date uts) {
 		this.uts = uts;
-	}	
-
+	}
 }

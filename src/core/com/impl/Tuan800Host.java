@@ -4,7 +4,7 @@ import com.gargoylesoftware.htmlunit.SgmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.spider.DBService;
-import com.spider.KeywordService;
+import com.spider.ConfigService;
 import com.spider.entity.DomainEntity;
 
 import org.apache.log4j.Logger;
@@ -32,9 +32,9 @@ public class Tuan800Host extends AbstractHost {
     private String nid = "";
 
     public void processHost(){
-        for(int i = 0;i < KeywordService.keywords.size();i++){
+        for(int i = 0;i < ConfigService.keywords.size();i++){
             try{
-                Map.Entry<String, String> entry = KeywordService.keywords.get(i);
+                Map.Entry<String, String> entry = ConfigService.keywords.get(i);
                 siteName = entry.getKey();
                 nid = entry.getValue();
                 log.info("当前站点：" + siteName + "-----------------" + i);

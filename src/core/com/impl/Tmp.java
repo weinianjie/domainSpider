@@ -1,7 +1,7 @@
 package com.impl;
 
 import com.spider.DBService;
-import com.spider.KeywordService;
+import com.spider.ConfigService;
 
 import java.util.Map;
 
@@ -16,9 +16,9 @@ public class Tmp {
     public static void doSomething(){
         String cityName = "";
         String siteName = "";
-        for(int i = 0;i < KeywordService.keywords.size();i++ ){
+        for(int i = 0;i < ConfigService.keywords.size();i++ ){
             try{
-                Map.Entry<String, String> entry = KeywordService.keywords.get(i);
+                Map.Entry<String, String> entry = ConfigService.keywords.get(i);
                 cityName = entry.getKey();
                 siteName = entry.getValue();
                 String[] keyArray = siteName.split(",");
